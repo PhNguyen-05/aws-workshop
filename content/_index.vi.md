@@ -5,29 +5,36 @@ weight: 1
 chapter: false
 ---
 
-
-## Báo cáo thực tập:
+# Báo cáo thực tập
 
 ### Thông tin sinh viên:
 
-  Họ và tên: Trần Hồ Phương Nguyên
+&emsp; **Họ và tên:** Trần Hồ Phương Nguyên
 
-  Số điện thoại: 0838538280
+&emsp; **Số điện thoại:** 0838538280
 
-  Email: 23110271.student.hcmmute.edu.vn
+&emsp; **Email:** 23110271.student.hcmute.edu.vn
 
-  Trường: Đại học Công nghệ Kỹ thuật TP.HCM
+&emsp; **Trường:** Đại học Công nghệ Kỹ thuật TP.HCM
 
-  Ngành: Công nghệ thông tin
+&emsp; **Ngành:** Công nghệ thông tin
 
-  Lớp: AWS102026
+&emsp; **Lớp:** AWS102026
 
-  Công ty thực tập: Công ty TNHH Amazon Web Services Viet Nam
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
-  Vị trí thực tập: Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-  Thời gian thực tập: Từ ngày 01/10/2026 đến ngày 01/01/2027
+&emsp; **Thời gian thực tập:** Từ ngày 01/10/2026 đến ngày 01/01/2027
 
+![Ảnh đại diện](/images/avatar.jpg)
 
+### Nội dung báo cáo
 
-![Ảnh đại diện](../static/images/avatar.jpg)
+1.  [Worklog](1-Worklog/)
+2.  [Proposal](2-Proposal/)
+3.  [Các bài blogs đã đăng](3-BlogsPosted/)
+4.  [Các events đã tham gia](4-EventParticipated/)
+5.  [Workshop](5-Workshop/)
+6.  [Tự đánh giá](6-Self-evaluation/)
+7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)

@@ -5,29 +5,36 @@ weight: 1
 chapter: false
 ---
 
+# Internship Report
 
-## Internship Report:
+### Student Information:
 
-### Student information:
+&emsp; **Full Name:** Tran Ho Phuong Nguyen
 
-  Full Name: Tran Ho Phuong Nguyen
+&emsp; **Phone Number:** 0838538280
 
-  Phone Number: 0838538280
+&emsp; **Email:** 23110271.student.hcmute.edu.vn
 
-  Email: 23110271.student.hcmute.edu.vn
+&emsp; **University:** Ho Chi Minh City University of Technology and Engineering
 
-  University: Ho Chi Minh City University of Technology and Engineering
+&emsp; **Major:** Information Technology
 
-  Major: Information Technology
+&emsp; **Class:** AWS102026
 
-  Class: AWS102026
+&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
-  Internship Company: Amazon Web Services Viet Nam Company Limited
+&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-  Internship Position: Workforce Bootcamp - First Cloud AI Journey
+&emsp; **Internship Duration:** From 01/10/2026 to 01/01/2027
 
-  Internship Duration: From 01/10/2026 to 01/01/2027
+![Profile picture](/images/avatar.jpg)
 
+### Report Content
 
-
-![Profile picture](../static/images/avatar.jpg)
+1.  [Worklog](1-Worklog/)
+2.  [Proposal](2-Proposal/)
+3.  [BlogsPosted](3-BlogsPosted/)
+4.  [Events Participated](4-EventParticipated/)
+5.  [Workshop](5-Workshop/)
+6.  [Self-evaluation](6-Self-evaluation/)
+7.  [Sharing and Feedback](7-Feedback/)

@@ -1,7 +1,8 @@
 baseURL = "https://PhNguyen-05.github.io/aws-workshop/"
 relativeURLs = false
 canonifyURLs = false
-defaultContentLanguage = "vi"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 contentDir = "content"
 
 # Change the default theme to be use when building the site with Hugo
