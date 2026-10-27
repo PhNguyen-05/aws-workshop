@@ -31,4 +31,4 @@ pre: " <b> 1.1. </b> "
 
 
 
-![Ảnh đại diện](/images/avatar.jpg)
+![Ảnh đại diện](../static/images/avatar.jpg)

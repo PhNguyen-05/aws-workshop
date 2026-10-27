@@ -31,4 +31,4 @@ pre: " <b> 1.1. </b> "
 
 
 
-![Profile picture](/images/avatar.jpg)
+![Profile picture](../static/images/avatar.jpg)
