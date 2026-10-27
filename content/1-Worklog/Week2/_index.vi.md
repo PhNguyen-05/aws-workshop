@@ -1,9 +1,9 @@
 ---
-title: "Worklog Tuần 1"
+title: "Worklog Tuần 2"
 date: 2026-10-05
-weight: 1
+weight: 2
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: " <b> 1.2. </b> "
 ---
 
 
