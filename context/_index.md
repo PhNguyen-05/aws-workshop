@@ -11,7 +11,6 @@ pre: " <b> 1.1. </b> "
 
 ### Student information:
 
-
   Full Name: Tran Ho Phuong Nguyen
 
   Phone Number: 0838538280
