@@ -8,7 +8,10 @@ pre: " <b> 1.1. </b> "
 
 
 ## Báo cáo thực tập:
-  Họ và tên: Trần Hồ Phương Nguyên
+
+### Thông tin sinh viên:
+
+  Họ và tên: Trần Hồ Phương Nguyên
 
   Số điện thoại: 0838538280
 
@@ -18,7 +21,7 @@ pre: " <b> 1.1. </b> "
 
   Ngành: Công nghệ thông tin
 
-  Lớp: 231101
+  Lớp: AWS102026
 
   Công ty thực tập: Công ty TNHH Amazon Web Services Viet Nam
 
@@ -27,4 +30,5 @@ pre: " <b> 1.1. </b> "
   Thời gian thực tập: Từ ngày 01/10/2026 đến ngày 01/01/2027
 
 
-Ảnh đại diện:
+
+![Ảnh đại diện](/images/avatar.jpg)

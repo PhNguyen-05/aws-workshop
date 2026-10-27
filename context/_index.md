@@ -11,7 +11,7 @@ pre: " <b> 1.1. </b> "
 
 ### Student information:
 
-  Full Name: Tran Ho Phuong Nguyen
+  Full Name: Tran Ho Phuong Nguyen
 
   Phone Number: 0838538280
 
@@ -21,7 +21,7 @@ pre: " <b> 1.1. </b> "
 
   Major: Information Technology
 
-  Class: 231101
+  Class: AWS102026
 
   Internship Company: Amazon Web Services Viet Nam Company Limited
 
@@ -30,4 +30,5 @@ pre: " <b> 1.1. </b> "
   Internship Duration: From 01/10/2026 to 01/01/2027
 
 
-Profile picture:
+
+![Profile picture](/images/avatar.jpg)
