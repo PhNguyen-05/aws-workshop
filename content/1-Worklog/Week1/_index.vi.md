@@ -17,13 +17,48 @@ pre: " <b> 1.1. </b> "
 
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 05/10/2026   | 05/10/2026      |                                           |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 06/10/2026   | 06/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 07/10/2026   | 07/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 08/10/2026   | 08/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 09/10/2026   | 09/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| :---: | :--- | :---: | :---: | :--- |
+| 2 | - Gặp gỡ, làm quen với các thành viên FCAJ <br> - Đọc và ghi nhớ nội quy, quy định tại đơn vị thực tập <br> - Tìm hiểu lộ trình học tập và hình thức báo cáo (worklog hằng tuần) <br> - Chuẩn bị môi trường làm việc: email, công cụ ghi chú, GitHub repo cho báo cáo | 05/10/2026 | 05/10/2026 | |
+| 3 | - Tìm hiểu AWS và điện toán đám mây: <br>&emsp; + Khái niệm Cloud Computing, mô hình trả tiền theo mức sử dụng <br>&emsp; + Hạ tầng toàn cầu: Region, Availability Zone, Edge Location <br> - Tìm hiểu các nhóm dịch vụ: <br>&emsp; + Compute (EC2, Lambda) <br>&emsp; + Storage (S3, EBS) <br>&emsp; + Networking (VPC) <br>&emsp; + Database (RDS, DynamoDB) <br> - Tìm hiểu mô hình trách nhiệm chia sẻ (Shared Responsibility Model) | 06/10/2026 | 06/10/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Tạo AWS Free Tier account (đăng ký, xác minh, chọn support plan) <br> - Tìm hiểu AWS Management Console và AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account và bảo mật tài khoản <br>&emsp; + Cài đặt & cấu hình AWS CLI (`aws configure`) <br>&emsp; + Dùng AWS CLI để kiểm tra thông tin tài khoản, danh sách region, dịch vụ EC2 <br>&emsp; + **Task 3:** thiết lập cost budget với AWS Budgets, nhận cảnh báo qua email | 07/10/2026 | 07/10/2026 | <https://cloudjourney.awsstudygroup.com/> <br> <https://000001.awsfcaj.com/> |
+| 5 | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types (General purpose, Compute/Memory optimized, ...) <br>&emsp; + AMI <br>&emsp; + EBS và các loại volume <br>&emsp; + Key pair, Security group <br> - Các cách remote SSH vào EC2 (SSH client, EC2 Instance Connect, Session Manager) <br> - Tìm hiểu Elastic IP và khác biệt giữa public IP thường với Elastic IP <br> - Đọc phần lưu ý về các dịch vụ dễ làm hao credit | 08/10/2026 | 08/10/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Thực hành:** <br>&emsp; + **Task 1 (EC2):** tạo instance `Test Instance`, tạo key pair `first-kp` (RSA, .pem), tạo security group, kết nối SSH, gắn EBS volume, sau đó terminate instance <br>&emsp; + **Task 2 (Bedrock):** gửi use case, chọn Claude 3 Haiku, chạy thử prompt trong Playground <br>&emsp; + **Task 4 (Lambda):** tạo function `http-function-url-tutorial` từ blueprint "Getting started with Lambda HTTP", kiểm tra function URL, sau đó xóa function <br>&emsp; + **Task 5 (RDS):** tạo database Aurora (PostgreSQL Compatible) bằng Easy create, chờ trạng thái Available, sau đó xóa instance và cluster <br> - Rà soát lại toàn bộ tài nguyên để đảm bảo đã dọn dẹp <br> - Kiểm tra trang Credits trong Billing để xác nhận credit nhận được | 09/10/2026 | 09/10/2026 | <https://000001.awsfcaj.com/4-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-chi-ti%E1%BA%BFt-5-nhi%E1%BB%87m-v%E1%BB%A5-ki%E1%BA%BFm-ti%E1%BB%81n/> |
+
+### Chi tiết các nhiệm vụ thực hành:
+
+#### Task 1: Khởi tạo EC2 instance
+
+* Mở nhiệm vụ "Launch an instance using EC2" trong widget **Explore AWS** trên Console Home, chọn **Start activity**.
+* Đặt tên instance, chọn AMI, giữ cấu hình phần cứng mặc định.
+* Tạo key pair mới (tên `first-kp`, loại RSA, định dạng `.pem`) và lưu file key cẩn thận để dùng khi SSH.
+* Tạo security group mới với các tùy chọn mặc định, rà soát cấu hình rồi chọn **Launch instance**.
+* Sau khi hoàn thành nhiệm vụ, **terminate** instance để tránh phát sinh chi phí.
+
+#### Task 2: Amazon Bedrock Playground
+
+* Chọn nhiệm vụ "Use a foundation model in the Amazon Bedrock", chọn model **Claude Haiku 5.5** và điền thông tin use case.
+* Nếu gặp lỗi không có quyền truy cập model, tạo support case (Account and billing → Account Activation → Bedrock Allowlisting) kèm Account ID và Region, chờ AWS phản hồi.
+* Khi được cấp quyền, nhập prompt thử nghiệm, chạy và xem phản hồi của model.
+
+#### Task 3: AWS Budgets
+
+* Chọn nhiệm vụ "Set up a cost budget using AWS Budgets".
+* Nhập email nhận thông báo, tạo budget và kiểm tra budget đã được tạo thành công.
+* Đây là bước quan trọng để theo dõi chi phí và tránh vượt hạn mức credit.
+
+#### Task 4: Web app với AWS Lambda
+
+* Chọn nhiệm vụ "Create a web app using AWS Lambda", dùng blueprint **Getting started with Lambda HTTP**.
+* Đặt tên function `http-function-url-tutorial`, xác nhận các điều khoản và tạo function.
+* Sau khi hoàn thành, xóa function (nhập `confirm` để xác nhận).
+
+#### Task 5: Cơ sở dữ liệu với Amazon RDS
+
+* Chọn nhiệm vụ "Create an Amazon RDS Database", dùng **Easy create** với engine **Aurora (PostgreSQL Compatible)**.
+* Chờ database chuyển sang trạng thái **Available**.
+* Dọn dẹp: xóa DB instance (`database-1-instance-1`), sau đó xóa DB cluster (`database-1`), bỏ chọn tạo final snapshot và nhập `delete me` để xác nhận.
 
 
 ### Kết quả đạt được tuần 1:
