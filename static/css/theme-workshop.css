@@ -374,3 +374,13 @@ table tbody tr:nth-child(even) {
 table tbody tr:hover {
   background-color: #f2f5f8;
 }
+
+/* Định dạng ảnh đại diện trang chủ */
+img[src*="avatar"] {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  margin: 1.5rem 0 !important;
+  display: block;
+}

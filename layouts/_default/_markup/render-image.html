@@ -1,0 +1,25 @@
+{{- $url := urls.Parse .Destination -}}
+{{- $dest := .Destination -}}
+{{- $width := "" -}}
+{{- $height := "" -}}
+{{- $classes := slice -}}
+
+{{- if $url.RawQuery -}}
+  {{- $query := $url.Query -}}
+  {{- with index $query "width" -}}
+    {{- $width = index . 0 -}}
+  {{- end -}}
+  {{- with index $query "height" -}}
+    {{- $height = index . 0 -}}
+  {{- end -}}
+  {{- with index $query "classes" -}}
+    {{- $classes = split (index . 0) "," -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $url.IsAbs -}}
+  {{- $path := strings.TrimPrefix "/" $url.Path -}}
+  {{- $dest = $path | relURL -}}
+{{- end -}}
+
+<img src="{{ $dest }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}{{ if $width }} style="width: {{ $width }};"{{ end }}{{ if $height }} style="height: {{ $height }};"{{ end }}{{ if $classes }} class="{{ delimit $classes " " }}"{{ end }} />
