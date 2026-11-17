@@ -63,6 +63,18 @@ Nhiều tổ chức doanh nghiệp xây dựng mô hình tài khoản tập trun
 | **Khi cập nhật trạng thái** (ví dụ đánh dấu deprecated) | Phải kích hoạt lại toàn bộ pipeline đồng bộ qua Lambda | Trạng thái mới tự động phản ánh tức thì ở mọi tài khoản nhận |
 | **Độ tin cậy & Rủi ro** | Dễ bị throttling API, lỗi Lambda, tag drift | Đồng bộ ở tầng nền tảng AWS (native), loại bỏ hoàn toàn mã nguồn trung gian |
 
+![Quy trình chia sẻ tag và kiểm soát ABAC với EC2 AMI Tag Sharing](/images/blog1/workflow.png)
+*Hình: Kiến trúc phân phối Golden AMI và kiểm soát khởi chạy bằng Tag Sharing & ABAC*
+
+### Luồng hoạt động chi tiết theo sơ đồ:
+1. **Khởi tạo Golden AMI:** Tài khoản A (chủ sở hữu) tạo Golden AMI từ EC2 instance đã được cấu hình và kiểm định tiêu chuẩn.
+2. **Chia sẻ Image:** Tài khoản A chia sẻ quyền truy cập Golden AMI sang các tài khoản workload (Tài khoản B và C).
+3. **Hiển thị Tag tại tài khoản nhận:** Khi kiểm tra AMI tại Tài khoản B và C, chỉ các Shared Tag mang tiền tố `ec2:SharedTag/status=approved` và `ec2:SharedTag/os-version=al2023` xuất hiện (chế độ chỉ đọc); Tag riêng `team=blog1-lab` được bảo mật hoàn toàn tại Tài khoản A.
+4. **Kiểm tra chính sách ABAC:** Nhóm phát triển tại Tài khoản B và C yêu cầu khởi chạy EC2, hệ thống kích hoạt kiểm tra IAM Policy với điều kiện ràng buộc `status = approved`.
+5. **Khởi chạy máy ảo thành công:** Do Shared Tag thỏa mãn điều kiện chính sách, máy ảo EC2 được phép khởi chạy an toàn vào môi trường workload.
+6. **Cập nhật vòng đời AMI:** Khi chủ sở hữu AMI cập nhật giá trị tag (ví dụ: đổi `approved` thành `deprecated` khi hết hạn hoặc phát hiện lỗ hổng).
+7. **Đồng bộ tự động (Native Propagation):** Giá trị tag mới tự động được cập nhật tức thì sang Tài khoản B và C theo đường nét đứt mà không cần bất kỳ sự can thiệp nào từ Lambda hay SNS trung gian.
+
 ---
 
 ## 5. Những điều cần lưu ý

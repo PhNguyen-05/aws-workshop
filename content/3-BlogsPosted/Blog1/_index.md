@@ -63,6 +63,18 @@ In enterprise multi-account architectures, organizations often establish a centr
 | **Updating status** (e.g. marking deprecated) | Pipeline must re-trigger across all recipient accounts | New value is instantly reflected in all recipient accounts natively |
 | **Reliability & Overhead** | Susceptible to API throttling, Lambda failures, and tag drift | Native AWS platform feature with zero maintenance overhead |
 
+![Golden AMI Tag Sharing and ABAC Architecture Workflow](/images/blog1/workflow.png)
+*Figure: Golden AMI distribution architecture and launch governance via Tag Sharing & ABAC*
+
+### Detailed Workflow Walkthrough:
+1. **Golden AMI Creation:** Account A (AMI Owner) builds and bakes a baseline Golden AMI from a standardized EC2 instance.
+2. **Image Sharing:** Account A grants launch permissions for the Golden AMI to workload spoke accounts (Account B and Account C).
+3. **Recipient Tag Visibility:** When inspecting the shared AMI in Accounts B and C, only the shared tags (`ec2:SharedTag/status=approved` and `ec2:SharedTag/os-version=al2023`) are visible (read-only); private tags like `team=blog1-lab` remain securely hidden within Account A.
+4. **ABAC Policy Evaluation:** Engineers in Accounts B and C request to launch instances, triggering IAM policy evaluation enforcing condition `status = approved`.
+5. **Successful EC2 Launch:** Since the shared tag satisfies the policy condition, EC2 instances launch successfully in the workload environment.
+6. **Lifecycle Management:** When the AMI owner updates tag values (e.g., transitions from `approved` to `deprecated` upon end-of-life or vulnerability discovery).
+7. **Native Propagation:** The updated tag value instantly propagates to Accounts B and C (represented by the green dashed line) without requiring any cross-account Lambda or SNS automation.
+
 ---
 
 ## 5. Key Considerations
